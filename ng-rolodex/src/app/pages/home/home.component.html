@@ -1,6 +1,8 @@
 <h1>{{title}}</h1> 
 
 <div>
-    <input type="text" id="name" name="name">
-    <button>Search</button>
+
+        <input type="text" id="name" name="name" [(ngModel)]="searchInput.search">
+
+    <button (click)="searchInput()">Search</button>
 </div>
