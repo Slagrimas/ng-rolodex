@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageHeaderComponent } from './pages/pageHeader/pageHeader.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PageHeaderComponent } from './pages/pageHeader/pageHeader.component';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    PageHeaderComponent
+    PageHeaderComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,
