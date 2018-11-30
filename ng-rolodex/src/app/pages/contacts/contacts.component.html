@@ -1,5 +1,4 @@
 <h1>{{title}}</h1> 
-<div class="card">
+<div class="card" *ngIf="isLoggedIn()">
     <h3>{{ contacts | json }}</h3>
-
 </div>

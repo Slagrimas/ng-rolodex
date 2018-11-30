@@ -8,8 +8,29 @@ import { Component } from '@angular/core';
 
  export class CreateContactComponent {
   title: string = "Create Contact Page";
+  formPlug: {
+    name: string,
+    address: string,
+    mobile: string,
+    email: string,
+    instagram: string,
+  } = {
+      name: '',
+      address: '',
+      mobile: '',
+      email: '',
+      instagram: '',
+    }
 
-   constructor() {
-   }
-   
+   constructor() {   }
+
+   createContact() {
+    console.log(this.formPlug);
+  }
+
 } 
+
+
+
+
+//   

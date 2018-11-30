@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SessionServices } from '../../services/session.service';
 
 @Component({
   selector: 'profile-page',
@@ -9,9 +10,10 @@ import { Component } from '@angular/core';
 export class ProfileComponent {
   title: string = 'Welcome to your profile!';
   username: string = 'yeah_shad';
+  user: object;
   name: string = 'shadrach lagrimas';
 
-  constructor() {
+  constructor(private session: SessionServices) {
 
   }
 }

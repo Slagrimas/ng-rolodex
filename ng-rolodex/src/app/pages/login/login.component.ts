@@ -30,9 +30,7 @@ export class LoginComponent {
           return this.router.navigate(['/'])
       })
   }
-  submit() {
-    console.log(this.loginForm);
-  }
+ 
 
 }
 
