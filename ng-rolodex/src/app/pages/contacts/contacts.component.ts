@@ -9,8 +9,8 @@ import { BackendService } from '../../services/backend.service'
 
 export class ContactsComponent {
     title: string = "Contacts Page";
-    //   contacts: Array = [];
-    contacts: Object[] = [];
+      contacts: Array = [];
+    // contacts: Object[] = [];
     contact: object;
 
     constructor(private backend: BackendService) {

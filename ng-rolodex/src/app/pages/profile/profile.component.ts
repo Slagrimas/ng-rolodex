@@ -1,16 +1,17 @@
 import { Component } from '@angular/core';
 
- @Component({
+@Component({
   selector: 'profile-page',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
 
- export class ProfileComponent {
+export class ProfileComponent {
+  title: string = 'Welcome to your profile!';
+  username: string = 'yeah_shad';
+  name: string = 'shadrach lagrimas';
 
-  title: string = "Profile page";
-  
-   constructor() {
+  constructor() {
 
-   }
-} 
+  }
+}
