@@ -15,12 +15,13 @@ export class BackendService {
     }
 
 
-getContacts() {
-    return new Promise ((resolve) => {
-        return resolve(data.contacts);
-    })
-    // return data.contacts;
-    // console.log('this is the data', data)
-}
+    getContacts() {
+        return new Promise((resolve) => {
+            return resolve(data.contacts);
+        })
+
+        // return data.contacts;
+        // console.log('this is the data', data)
+    }
 
 } 

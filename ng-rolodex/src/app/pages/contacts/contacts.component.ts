@@ -13,13 +13,12 @@ export class ContactsComponent {
     contacts: Object[] = [];
     contact: object;
 
-
-
     constructor(private backend: BackendService) {
         this.backend.getContacts()
             .then((data) => {
                 this.contacts = data;
             })
+            
     }
 
 } 

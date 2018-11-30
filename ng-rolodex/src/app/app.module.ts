@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PageHeaderComponent } from './pages/pageHeader/pageHeader.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { ContactsComponent } from './pages/contacts/contacts.component';
     HomeComponent,
     LoginComponent,
     PageHeaderComponent,
-    ContactsComponent
+    ContactsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
