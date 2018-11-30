@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SessionServices } from '../../services/session.service';
 
  @Component({
   selector: 'createContact-page',
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 
  export class CreateContactComponent {
   title: string = "Create Contact Page";
+  user: object;
   formPlug: {
     name: string,
     address: string,
@@ -22,11 +24,17 @@ import { Component } from '@angular/core';
       instagram: '',
     }
 
-   constructor() {   }
+   constructor(private session: SessionServices) { 
+    this.user = this.session.getUser();
+     }
 
    createContact() {
     console.log(this.formPlug);
   }
+
+  isLoggedIn(){
+    return this.session.getIsLoggedIn();
+}
 
 } 
 
