@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SessionServices } from '../../services/session.service';
 
+
 @Component({
   selector: 'profile-page',
   templateUrl: './profile.component.html',
@@ -9,9 +10,9 @@ import { SessionServices } from '../../services/session.service';
 
 export class ProfileComponent {
   title: string = 'Welcome to your profile!';
-  username: string = 'yeah_shad';
-  name: string = 'shadrach lagrimas';
   user: object;
+  username: string = 'user.username';
+  name: string = 'shadrach lagrimas';
 
   constructor(private session: SessionServices) {
     this.user = this.session.getUser();

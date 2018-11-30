@@ -9,7 +9,7 @@
                 <label>name:</label>
               </div>
               <div class="rowData">
-                <input type="text" name="name" placeholder="first last">
+                <input type="text" name="name" placeholder="first last" [(ngModel)]="formPlug.name">
               </div>
             </div>
       
@@ -18,7 +18,7 @@
                 <label>address:</label>
               </div>
               <div class="rowData">
-                <input type="text" name="address" placeholder="street, city, zipcode">
+                <input type="text" name="address" placeholder="street, city, zipcode" [(ngModel)]="formPlug.address">
               </div>
             </div>
       
@@ -27,7 +27,7 @@
                 <label>mobile:</label>
               </div>
               <div class="rowData">
-                <input type="text" name="mobile" placeholder="phone">
+                <input type="text" name="mobile" placeholder="phone"[(ngModel)]="formPlug.mobile">
               </div>
             </div>
 
@@ -37,7 +37,7 @@
                 <label>email:</label>
               </div>
               <div class="rowData">
-                <input type="text" name="email" placeholder="email">
+                <input type="text" name="email" placeholder="email" [(ngModel)]="formPlug.email">
               </div>
             </div>
    
@@ -46,7 +46,7 @@
                 <label>instagram:</label>
               </div>
               <div class="rowData">
-                <input type="text" name="instagram" placeholder="@name">
+                <input type="text" name="instagram" placeholder="@name"[(ngModel)]="formPlug.instagram">
               </div>
             </div>
 
@@ -55,3 +55,9 @@
           </form>
         </div>
       </div>
+
+<div *ngIf="!isLoggedIn()">
+    <div>
+        Please Sign In, before continuing
+    </div>
+</div>

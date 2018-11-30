@@ -2,3 +2,9 @@
 <div class="card" *ngIf="isLoggedIn()">
     <h3>{{ contacts | json }}</h3>
 </div>
+
+<div *ngIf="!isLoggedIn()">
+        <div>
+            Please Sign In, before continuing
+        </div>
+    </div>

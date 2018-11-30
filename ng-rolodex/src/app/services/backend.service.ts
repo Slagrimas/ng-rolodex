@@ -9,16 +9,25 @@ import data from './mockData';
 })
 
 export class BackendService {
+    contacts: Object[] = data.contacts
 
     constructor() {
 
     }
+
 
     getContacts() {
         return new Promise((resolve) => {
             return resolve(data.contacts);
         })
 
+    }
+
+    addContact(newContact) {
+        this.contacts.push(newContact);
+        return new Promise((resolve) => {
+            return resolve(this.contacts)
+        })
     }
 
     login(user) {

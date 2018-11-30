@@ -1,5 +1,5 @@
-<h1>{{title}}</h1>
-<div class="profile" *ngIf="isLoggedIn()">
-    <p>Username: {{username}}</p>
+<div *ngIf="isLoggedIn()">
+    <h1>{{title}}</h1>
+    <p>Username: {{user.username}}</p>
     <p>Name: {{name}}</p>
 </div>
