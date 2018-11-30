@@ -10,10 +10,15 @@ import { SessionServices } from '../../services/session.service';
 export class ProfileComponent {
   title: string = 'Welcome to your profile!';
   username: string = 'yeah_shad';
-  user: object;
   name: string = 'shadrach lagrimas';
+  user: object;
 
   constructor(private session: SessionServices) {
-
+    this.user = this.session.getUser();
   }
+
+  isLoggedIn(){
+    return this.session.getIsLoggedIn();
+}
+
 }
