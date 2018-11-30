@@ -9,15 +9,15 @@ import { BackendService } from '../../services/backend.service'
 
 export class ContactsComponent {
     title: string = "Contacts Page";
-      contacts: Array = [];
+    contacts: Array<any> = [];
     // contacts: Object[] = [];
     contact: object;
 
     constructor(private backend: BackendService) {
         this.backend.getContacts()
             .then((data) => {
-                this.contacts = data;
-            })    
+                this.contacts.push(data);
+            })
     }
 
 } 

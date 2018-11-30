@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import data from './mockData';
-import { resolve } from 'dns';
+
 
 
 
@@ -14,14 +14,25 @@ export class BackendService {
 
     }
 
-
     getContacts() {
         return new Promise((resolve) => {
             return resolve(data.contacts);
         })
 
-        // return data.contacts;
-        // console.log('this is the data', data)
     }
 
+    login(user) {
+        return Promise.resolve({
+            id: 18,
+            username: user.username
+        });
+    }
+
+    logout() {
+        return Promise.resolve({});
+    }
+
+    register() {
+        return Promise.resolve({});
+    }
 } 

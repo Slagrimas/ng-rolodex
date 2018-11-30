@@ -1,12 +1,17 @@
-<div>
-    
-<ul>
-    <li><a routerLink="/">Home</a></li>
-    <br>
-    <li><a routerLink="/login">Login</a></li>
-    <li><a routerLink="/contacts">Contacts</a></li>
-    <li><a routerLink="/profile">My Profile</a></li>
-    <li><a routerLink="/create">Create</a></li>
-  </ul> 
+<div class="mainDiv">
+    <div><a routerLink="/">Home</a></div>
+    <div><a routerLink="/contacts">Contacts</a></div>
+    <div><a routerLink="/profile">My Profile</a></div>
+    <div><a routerLink="/create">Create</a></div>
 
-</div>
+    <div class="right">
+        <div *ngIf="user.isLoggedIn">
+            Hello, {{ user.username }},
+            <button (click)="logout()">Logout</button>
+        </div>
+
+        <div *ngIf="!isLoggedIn()">
+            <button (click)="login()">Login</button>
+        </div>
+
+    </div>

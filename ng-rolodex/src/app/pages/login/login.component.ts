@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'login-page',
@@ -7,23 +9,34 @@ import { Component } from '@angular/core';
 })
 
 export class LoginComponent {
-
   title: string = 'Login Page';
 
-  formData: {
-    username: string,
-    password: string,
-  } = {
-      username: 'Shad',
-      password: '',
+    loginForm: {
+        username: '',
+        password: ''
+    } = {
+            username: '',
+            password: ''
+        };
 
-    };
 
-  constructor() {
+  constructor(private auth: AuthService, private router: Router) {
 
   }
 
+  login() {
+      return this.auth.login(this.loginForm)
+      .then(()=> {
+          return this.router.navigate(['/'])
+      })
+  }
   submit() {
-    console.log(this.formData);
+    console.log(this.loginForm);
   }
+
 }
+
+
+
+   
+
