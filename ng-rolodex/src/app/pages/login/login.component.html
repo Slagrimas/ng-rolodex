@@ -1,18 +1,14 @@
-<h1>{{title}}</h1>
+<div id="loginDiv">
 
-<form action="">
-  Username:
-  <input type="text" name="username" [(ngModel)]="formData.username">
-  <br><br>
-  Password:
-  <input type="text" name="password" [(ngModel)]="formData.password">
-</form>
-
-<div [class]="formData.username === 'Shad' ? 'test' : ''">
-  {{formData.username}}
-</div>
-<br>
-{{formData.password}}
-
-<br>
-<button (click)="submit()" [disabled]="false">Login</button>
+        <h1>{{title}}</h1>
+      
+        <form action="">
+          Username:<br>
+          <input type="text" name="username" [(ngModel)]="formData.username" autofocus>
+          <br><br>
+          Password:<br>
+          <input type="password" name="password" [(ngModel)]="formData.password">
+        </form>
+      
+        <button (click)="submit()" [class]="formData.class">Login</button>
+      </div>

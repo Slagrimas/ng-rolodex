@@ -17,8 +17,7 @@ export class ContactsComponent {
         this.backend.getContacts()
             .then((data) => {
                 this.contacts = data;
-            })
-            
+            })    
     }
 
 } 
