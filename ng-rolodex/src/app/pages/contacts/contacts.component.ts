@@ -11,19 +11,20 @@ import { SessionServices } from '../../services/session.service';
 export class ContactsComponent{
     title: string = "Contacts Page";
     user: object;
-    contacts: Array<any> = [];
+    contacts: any = [];
     // contacts: Object[] = [];
-    contact: object;
-
+    
     constructor(private backend: BackendService, private session: SessionServices) {
+        console.log('this is contacts', this.contacts)
         this.user = this.session.getUser();
         
     
         this.backend.getContacts()
         .then((data) => {
-            this.contacts.push(data);
+            console.log('this is data', data)
+            this.contacts = data;
         })
-        this.backend.addContact({ name: 'Lorenzo' });
+    
    
 }
 

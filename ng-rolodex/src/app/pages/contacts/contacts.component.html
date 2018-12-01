@@ -1,10 +1,16 @@
-<h1>{{title}}</h1> 
+<h1>{{title}}</h1>
 <div class="card" *ngIf="isLoggedIn()">
-    <h3>{{ contacts | json }}</h3>
+
+    <div *ngFor="let cont of contacts">
+        <p>{{ cont.name }}</p>
+        address: {{cont.address}}<br>
+        mobile: {{cont.mobile}}<br>
+        email: {{cont.email}}<br>
+        instagram: {{cont.instagram}}<br>
+    </div>
+
 </div>
 
-<div *ngIf="!isLoggedIn()">
-        <div>
-            Please Sign In, before continuing
-        </div>
-    </div>
+<div>
+    Please Sign In, before continuing
+</div>

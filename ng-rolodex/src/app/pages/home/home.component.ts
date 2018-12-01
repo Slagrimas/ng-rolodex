@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BackendService } from '../../services/backend.service';
+import { SessionServices } from '../../services/session.service';
 
 @Component({
   selector: 'home-page',
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
       searchInput: '',
     };
 
-  constructor(private backend: BackendService) {
+  constructor(private backend: BackendService, private session: SessionServices) {
 
   }
 
@@ -39,8 +40,8 @@ export class HomeComponent implements OnInit {
       })
   }
 
-  search() {
-  console.log(this.formSearch);
+  isLoggedIn(){
+    return this.session.getIsLoggedIn();
 }
 
 onKey(event: any) {
@@ -48,21 +49,23 @@ onKey(event: any) {
 
   if (this.formSearch.searchInput) {
     let filteredContacts = this.allContacts.filter((element, index) => {
-      console.log("current element.name:", element.name);
-      return element.name.includes(this.formSearch.searchInput);
+      // console.log("current element.name:", element.name);
+      return element.name.toLowerCase().includes(this.formSearch.searchInput.toLowerCase());
     })
 
     this.allContacts = filteredContacts;
     console.log("new this.allContacts:", this.allContacts);
+
   }
+
   else if (this.formSearch.searchInput === "") {
     this.backend.getContacts()
       .then(results => {
-        console.log("results:", results);
+        // console.log("results:", results);
         this.allContacts = results;
       })
       .catch(err => {
-        console.log("GET - allContacts - error:", err);
+        // console.log("GET - allContacts - error:", err);
       })
   }
 }
