@@ -1,8 +1,12 @@
-<h1>{{title}}</h1>
+<<h1>{{title}}</h1>
 
-<div>
-
-    <input type="text" id="name" name="name" [(ngModel)]="searchInput.search">
-
-    <button (click)="searchInput()">Search</button>
+<div>    
+        <form action="">
+          <input type="text" name="searchInput" (keyup)="onKey()" autofocus [(ngModel)]="formSearch.searchInput">
+        </form>
+      
+        {{formSearch.searchInput}}
+      
+        <br>
+        <button (click)="search()">Search</button>
 </div>

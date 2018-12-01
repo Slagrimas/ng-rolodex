@@ -33,7 +33,11 @@ export class CreateContactComponent {
 
   createContact() {
     console.log(this.formPlug);
-    this.backend.addContact({ name: this.formPlug.name, address: this.formPlug.address, mobile: this.formPlug.mobile, email: this.formPlug.email, instagram: this.formPlug.instagram })
+    this.backend.addContact({
+      name: this.formPlug.name, address: this.formPlug.address,
+      mobile: this.formPlug.mobile, email: this.formPlug.email,
+      instagram: this.formPlug.instagram
+    })
 
   }
 

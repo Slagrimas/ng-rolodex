@@ -13,7 +13,6 @@ export class AuthService {
     ) { }
 
 
-    
     login(user) {
         console.log(user)
         return this.backend.login(user)
