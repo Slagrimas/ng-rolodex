@@ -15,7 +15,6 @@ export class BackendService {
 
     }
 
-
     getContacts() {
         return new Promise((resolve) => {
             return resolve(data.contacts);

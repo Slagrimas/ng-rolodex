@@ -22,4 +22,5 @@ export class ProfileComponent {
     return this.session.getIsLoggedIn();
 }
 
+  
 }
