@@ -23,7 +23,7 @@ export class BackendService {
         this.contacts.push(newContact);
         return new Promise((resolve) => {
             return resolve(this.contacts)
-        })
+        }) 
     }
 
     login(user) {

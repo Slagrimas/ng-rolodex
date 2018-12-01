@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SessionServices } from '../../services/session.service';
+import { Router } from '@angular/router';
 import { BackendService } from '../../services/backend.service';
 
 @Component({
@@ -26,7 +27,7 @@ export class CreateContactComponent {
       instagram: '',
     }
 
-  constructor(private backend: BackendService, private session: SessionServices) {
+  constructor(private router: Router, private backend: BackendService, private session: SessionServices) {
     this.user = this.session.getUser();
 
   }
@@ -37,7 +38,9 @@ export class CreateContactComponent {
       name: this.formPlug.name, address: this.formPlug.address,
       mobile: this.formPlug.mobile, email: this.formPlug.email,
       instagram: this.formPlug.instagram
-    })
+    }) .then(()=>{
+      return this.router.navigate(['/contacts'])
+  })
 
   }
 

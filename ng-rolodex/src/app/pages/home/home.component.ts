@@ -55,7 +55,6 @@ onKey(event: any) {
 
     this.allContacts = filteredContacts;
     console.log("new this.allContacts:", this.allContacts);
-
   }
 
   else if (this.formSearch.searchInput === "") {

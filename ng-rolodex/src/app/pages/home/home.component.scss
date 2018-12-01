@@ -1,26 +1,32 @@
 h1{
     text-align: center;
+    font-family: 'Rajdhani', sans-serif
 }
 
 div {
     text-align: center;
+    font-family: 'Rajdhani', sans-serif
 }
 
 input {
     width: 25%;
     padding: 10px;
     border-radius: 10px;
+    font-family: 'Rajdhani', sans-serif
 }
 
 button {
     padding: 10px;
     border-radius: 10px;
+    font-family: 'Rajdhani', sans-serif
 }
 
 .card{
     border: solid black;
     width: 20%;
+    // display: inline-block;
     text-align: center;
     margin: auto;
-    padding: 10px;
+    padding: 20px;
+    font-family: 'Rajdhani', sans-serif
 }

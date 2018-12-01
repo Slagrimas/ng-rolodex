@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BackendService } from '../../services/backend.service'
 import { SessionServices } from '../../services/session.service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'contacts-page',
@@ -14,7 +15,7 @@ export class ContactsComponent{
     contacts: any = [];
     // contacts: Object[] = [];
     
-    constructor(private backend: BackendService, private session: SessionServices) {
+    constructor(private router: Router, private backend: BackendService, private session: SessionServices) {
         console.log('this is contacts', this.contacts)
         this.user = this.session.getUser();
         
@@ -23,6 +24,7 @@ export class ContactsComponent{
         .then((data) => {
             console.log('this is data', data)
             this.contacts = data;
+        
         })
     
    
@@ -30,6 +32,6 @@ export class ContactsComponent{
 
     isLoggedIn(){
         return this.session.getIsLoggedIn();
-    }
+    } 
 
 } 

@@ -4,7 +4,7 @@
         <form action="">
             <input type="text" name="searchInput" (keyup)="onKey()" autofocus [(ngModel)]="formSearch.searchInput">
         </form>
-        
+
         <div class="card" *ngFor="let cont of allContacts">
             <p>{{ cont.name }}</p>
             address: {{cont.address}}<br>
@@ -14,7 +14,7 @@
         </div>
 
         <br>
-        <button (click)="searchInput()">Search</button>
+        <!-- <button (click)="searchInput()">Search</button> -->
     </div>
 
     <div *ngIf="!isLoggedIn()">
