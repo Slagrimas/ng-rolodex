@@ -8,7 +8,7 @@ import { SessionServices } from '../../services/session.service';
     styleUrls: ['./contacts.component.scss']
 })
 
-export class ContactsComponent {
+export class ContactsComponent{
     title: string = "Contacts Page";
     user: object;
     contacts: Array<any> = [];
@@ -17,12 +17,15 @@ export class ContactsComponent {
 
     constructor(private backend: BackendService, private session: SessionServices) {
         this.user = this.session.getUser();
-
+        
+    
         this.backend.getContacts()
-            .then((data) => {
-                this.contacts.push(data);
-            })
-    }
+        .then((data) => {
+            this.contacts.push(data);
+        })
+        this.backend.addContact({ name: 'Lorenzo' });
+   
+}
 
     isLoggedIn(){
         return this.session.getIsLoggedIn();
