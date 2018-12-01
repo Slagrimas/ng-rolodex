@@ -56,17 +56,6 @@ const data = {
         "instagram": "@yeah_shad"
     }
   ],
-    "users": [ {
-        "id": 1,
-        "name": "WonderWoman",
-        "username": "WowWonderGirl"
-    },
-    {
-        "id": 2,
-        "name": "SpiderMan",
-        "username": "SwaeLee"
-    }
-]
 }
 
 export default data;
